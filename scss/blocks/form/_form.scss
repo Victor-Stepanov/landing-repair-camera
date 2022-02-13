@@ -1,0 +1,95 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 730px;
+
+  &_place_footer {
+    @include reset();
+    margin-top: 60px;
+  }
+
+  &__input {
+    @include font-style(14px, 400, 171%);
+    border: none;
+    width: 348px;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: rgba(142, 142, 152, 0.2);
+    border-radius: 8px 0px 0px 8px;
+    outline: none;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 0.375px;
+    padding: 13px 0 13px 16px;
+
+    &:hover {
+      background-color: rgba(142, 142, 152, 0.3);
+      cursor: pointer;
+    }
+  }
+  &__button {
+    @include reset();
+    border: none;
+    max-width: 221px;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: rgba(71, 71, 76, 1);
+    border-radius: 0px 8px 8px 0px;
+
+    //костыль
+    @include font-style(14px, 400, 171%);
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    letter-spacing: 0.375px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__button-text {
+    @include reset();
+    @include font-style(14px, 400, 171%);
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    letter-spacing: 0.375px;
+    padding: 13px 10px 13px 16px;
+  }
+
+  &__text {
+    @include reset();
+    @include font-style(12px, 400, 150%);
+    color: rgba(71, 71, 76, 1);
+    padding: 12px 0 0 10px;
+    // 18px для footer
+    &_place_footer {
+      padding-top: 18px;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .form {
+    &__text {
+      padding: 10px 0 0 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .form {
+   max-width: 320px;
+    
+    &__input {
+      width: 229px;
+      height: 50px;
+    }
+    &__button {
+      width: 51px;
+    }
+    &__button-text {
+      display: none;
+    }
+    &__text {
+      padding: 10px 0 0 2px;
+    }
+  }
+}

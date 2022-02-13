@@ -1,0 +1,41 @@
+.footer {
+	@include reset();
+	// Если двигать боковые отстпупы через padding, border-top не работает:(
+	margin: 240px 160px 60px 160px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	border-top: 2px solid #151515;
+
+	&__copyright {
+		@include reset();
+		@include font-style(12px, 400, 150%);
+		text-align: right;
+		color: rgba(71, 71, 76, 1);
+		//margin-top: -16px;
+		transform: translateY(-18px);
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.footer {
+		margin: 210px 60px 60px 60px;
+
+		&__copyright {
+			margin-top: 60px;
+			align-self: flex-start;
+			//margin-top: 0;
+			transform: none;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.footer {
+		margin: 180px 20px 20px 20px;
+		&__copyright {
+			margin-top: 40px;
+			align-self: flex-start;
+		}
+	}
+}

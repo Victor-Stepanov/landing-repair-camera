@@ -1,0 +1,77 @@
+.guarantee {
+	box-sizing: border-box;
+	margin: 0 0 120px 0;
+	padding: 0 160px 0 160px;
+	&__title {
+		@include reset();
+		@include font-style(32px, 400, 125%);
+		color: rgba(255, 255, 255, 1);
+		margin-bottom: 60px;
+	}
+	&__items {
+		@include reset();
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		list-style: none;
+		
+	}
+	&__item {
+		max-width: 265px;
+		background-color: rgba(28, 28, 30, 1);
+		border-radius: 10px;
+
+		&:hover {
+			background-color: rgba(35, 35, 39, 1);
+			cursor: pointer;
+		}
+	}
+
+	&__header {
+		@include reset();
+		@include font-style(18px, 500, 100%);
+		color: rgba(234, 234, 240, 1);
+		padding: 20px 0 0 20px;
+	}
+
+	&__description {
+		@include reset();
+		@include font-style(15px, 400, 127%);
+		color: rgba(142, 142, 152, 1);
+		padding: 38px 20px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.guarantee {
+		padding: 0 60px 0 60px;
+
+		&__title {
+			@include font-style(20px, 400, 150%);
+		}
+
+		&__item {
+			max-width: 314px;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.guarantee {
+		//width: calc(100% - 40px);
+		padding: 0 20px 0 20px;
+
+		&__title {
+			@include font-style(12px, 400, 150%);
+			margin-bottom: 40px;
+		}
+
+		&__item {
+			max-width: 314px;
+		}
+		&__description {
+			padding-top: 36px;
+			@include font-style(12px, 400, 150%);
+		}
+	}
+}
