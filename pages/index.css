@@ -1,5 +1,5 @@
-@import url(/Users/admin/WebDev/landing-repair-camera/vendor/normalize.css);
-@import url(/Users/admin/WebDev/landing-repair-camera/vendor/fonts/fonts.css);
+@import url(/Users/admin/Desktop/landing-repair-camera/vendor/normalize.css);
+@import url(/Users/admin/Desktop/landing-repair-camera/vendor/fonts/fonts.css);
 .body {
   font-family: "Roboto", sans-serif;
   max-width: 1440px;
@@ -102,7 +102,7 @@
   padding: 0;
   margin: 0;
   border: none;
-  max-width: 221px;
+  width: 221px;
   height: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -279,7 +279,7 @@
   border-radius: 10px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 900px) {
   .elements {
     margin-top: 52px;
     padding: 0 60px 0 60px;
