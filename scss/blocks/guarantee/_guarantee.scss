@@ -1,4 +1,6 @@
 .guarantee {
+	//max-width: 1120px;
+    //margin: 0 auto;
 	box-sizing: border-box;
 	margin: 0 0 120px 0;
 	padding: 0 160px 0 160px;
@@ -14,9 +16,11 @@
 		flex-wrap: wrap;
 		gap: 20px;
 		list-style: none;
+		
 	}
 	&__item {
 		max-width: 265px;
+		width: 100%;
 		background-color: rgba(28, 28, 30, 1);
 		border-radius: 10px;
 
@@ -66,7 +70,9 @@
 		}
 
 		&__item {
-			max-width: 314px;
+			max-width: none;
+			min-height: 148px;
+
 		}
 		&__description {
 			padding-top: 36px;

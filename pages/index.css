@@ -549,6 +549,7 @@
 
 .guarantee__item {
   max-width: 265px;
+  width: 100%;
   background-color: #1c1c1e;
   border-radius: 10px;
 }
@@ -603,7 +604,8 @@
     margin-bottom: 40px;
   }
   .guarantee__item {
-    max-width: 314px;
+    max-width: none;
+    min-height: 148px;
   }
   .guarantee__description {
     padding-top: 36px;
