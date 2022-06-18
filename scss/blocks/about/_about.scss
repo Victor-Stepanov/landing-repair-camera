@@ -1,0 +1,43 @@
+.about {
+	@include reset();
+	padding: 0 160px 0 160px;
+
+	&__description {
+		@include reset();
+		@include font-style(32px, 400, 125%);
+		color: rgba(142, 142, 152, 1);
+		padding-bottom: 60px;
+	}
+	&__title {
+		@include reset();
+		@include font-style(32px, 400, 125%);
+		color: rgba(255, 255, 255, 1);
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.about {
+		padding: 0 60px 0 60px;
+
+		&__description {
+			@include font-style(20px, 400, 150%);
+		}
+		&__title {
+			@include font-style(20px, 400, 150%);
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.about {
+		padding: 0 20px 0 20px;
+
+		&__description {
+			@include font-style(12px, 400, 150%);
+			padding-bottom: 20px;
+		}
+		&__title {
+			@include font-style(12px, 400, 150%);
+		}
+	}
+}

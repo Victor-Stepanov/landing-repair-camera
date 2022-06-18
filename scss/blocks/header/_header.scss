@@ -1,0 +1,49 @@
+.header {
+	@include reset();
+	display: flex;
+	flex-direction: column;
+	padding: 0 160px 0 160px;
+
+	&__title {
+		@include reset();
+		@include font-style(112px, 400, 100%);
+		color: rgba(255, 255, 255, 1);
+		padding-top: 60px;
+	}
+	&__subtitle {
+		@include reset();
+		@include font-style(80px, 400, 87%);
+		color: rgba(255, 255, 255, 1);
+		padding: 20px 0 230px 0;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.header {
+		padding: 0 60px 0 60px;
+
+		&__title {
+			@include font-style(70px, 400, 129%);
+			padding-top: 70px;
+		}
+		&__subtitle {
+			@include font-style(49px, 400, 120%);
+			padding: 0 0 470px 0;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.header {
+		padding: 0 20px 0 20px;
+
+		&__title {
+			@include font-style(50px, 400, 120%);
+			padding-top: 60px;
+		}
+		&__subtitle {
+			@include font-style(30px, 400, 127%);
+			padding: 10px 0 260px 0;
+		}
+	}
+}

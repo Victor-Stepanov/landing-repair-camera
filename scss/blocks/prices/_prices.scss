@@ -1,0 +1,115 @@
+.prices {
+	margin: 120px 0 120px 0;
+	padding: 0 160px 0 160px;
+
+	&__items {
+		display: flex;
+	}
+}
+.item {
+	max-width: 550px;
+	background-color: rgba(28, 28, 30, 1);
+	border-radius: 16px;
+	display: flex;
+	flex-direction: column;
+	margin-right: 20px;
+
+	&:hover {
+		background-color: rgba(35, 35, 39, 1);
+		cursor: pointer;
+	}
+	&:last-of-type {
+		margin-right: 0;
+	}
+
+	&__header {
+		max-width: 34px;
+		@include reset();
+		@include font-style(18px, 400, 100%);
+		color: rgba(142, 142, 152, 1);
+		padding: 40px 0 40px 40px;
+	}
+	&__title {
+		@include reset();
+		@include font-style(32px, 400, 100%);
+		color: rgba(255, 255, 255, 1);
+		padding-left: 40px;
+	}
+	&__description {
+		max-width: 470px;
+		@include reset();
+		@include font-style(32px, 400, 125%);
+		color: rgba(142, 142, 152, 1);
+		padding: 40px;
+	}
+	&__value {
+		max-width: 240px;
+		@include reset();
+		@include font-style(14px, 400, 100%);
+		color: rgba(37, 225, 151, 1);
+		padding-bottom: 40px;
+		padding-left: 40px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.prices {
+		padding: 0 60px 0 60px;
+		
+		&__items {
+			flex-direction: column;
+			
+		}
+	}
+
+	.item {
+		margin-right: 0;
+		margin-bottom: 20px;
+		max-width: 648px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		&__description {
+			max-width: 568px;
+			
+		}
+		
+	}
+
+	
+		
+}
+@media screen and (max-width: 767px) {
+	.prices {
+		margin: 70px 0 70px 0;
+		padding: 0 20px 0 20px;
+	}
+	.item{
+		&__header {
+			padding: 20px 0 10px 20px;
+			
+		}
+		&__title {
+			padding-left: 20px;
+			padding-bottom: 28px;
+			@include font-style(24px, 400, 133%);
+			
+		}
+		&__description {
+			max-width: 240px;
+			@include font-style(12px, 400, 150%);
+			padding:0 20px 100px 20px;
+			
+		}
+		&__value {
+			
+			@include font-style(12px, 400, 150%);
+			padding: 0 20px 20px;
+		
+			
+		}
+	}
+
+}
